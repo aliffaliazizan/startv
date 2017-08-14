@@ -1,0 +1,387 @@
+/*----------------------------------------------------*/
+/* BASIC SETUP*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    background-color: #212123;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*----------------------------------------------------*/
+/* REUSABLE COMPONENTS*/
+/*----------------------------------------------------*/
+
+.row {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.box {
+    padding: 1%;
+}
+
+.section {
+    padding: 0;
+}
+
+.icon-menu {
+    font-size: 130%;
+    display: inline-block;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 10px;
+}
+
+.icon-live {
+    font-size: 130%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.icon-viewers {
+    font-size: 140%;
+    display: inline-block;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 10px;
+}
+
+/* ------ TYPOGRAPHY ------ */
+
+h1 {
+    font-weight: 700;
+}
+
+h5 {
+    font-weight: 100;
+    color: #9B9B9B;
+}
+
+/* ------ MENU ------ */
+
+.logo-header {
+    height: 60px;
+    padding: 0;
+    box-sizing: border-box;
+    float: left;
+}
+
+.logo-footer {
+    padding: 0;
+    height: 50px;
+    float: left;
+    margin-right: 30px;
+}
+
+.box-menu {
+    padding: 0;
+    bottom: 0;
+    display: inline-block;
+}
+
+.menu {
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    background-color: #0E0E0E;
+}
+
+.menu .box-menu div {
+    margin-top: 15px;
+}
+
+.btn-menu:link,
+.btn-menu:visited {
+    padding: 8px 16px;
+    margin: 20px 20px;
+    background-color: #242424;
+    border-radius: 10px;
+    
+    color: #fff;
+    text-decoration: none;
+    
+    transition: background-color 0.2s;
+    
+    vertical-align: middle;
+}
+
+.btn-menu:hover,
+.btn-menu:active {
+    background-color: #414141;
+}
+
+.btn-share:link,
+.btn-share:active,
+.btn-share:visited {
+    padding: 8px 16px;
+    background-color: #A9A9A9;
+    border-radius: 10px;
+    
+    color: #000;
+    text-decoration: none;
+    
+    transition: background-color 0.2s;
+}
+
+.btn-share:hover,
+.btn-share:active {
+    background-color: #dbdbdb;
+}
+
+/* ------ VIDEO LIVE ------ */
+
+.video-live {
+    float: left;
+    color: #F5A623;
+    text-decoration: none;
+    font-size: 90%;
+    margin-top: 15px;
+    margin-left: -90px;
+}
+
+/* ------ SEARCH INPUT ------ */
+
+input {
+    outline: none;
+}
+
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+    float: right;
+    margin-top: 10px;
+	font-family: inherit;
+	font-size: 80%;
+    
+    background: #262525 url(img/search_icon.png) no-repeat 15px center;
+	border: solid 1px #262525;
+	padding: 9px 10px 9px 45px;
+	width: 85%;
+	
+	border-radius: 10em;
+	
+	transition: all .5s;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+input[type=search]:focus {
+    width: 120%;
+    color: #fff;
+}
+
+input:-moz-placeholder {
+	color: #4a4a4a;
+}
+input::-webkit-input-placeholder {
+	color: #4a4a4a;
+}
+
+
+/* ------ CONTENT ------ */
+
+.main-content {
+    top: 0;
+    display: table;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.content {
+    display: table-cell;
+    padding-right: 1.7%;
+}
+
+.video-player-area {
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+}
+
+.video-type-generic {
+    color: #AB2B23;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+/* ------ VIDEO PLAYER ------ */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; 
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-date {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.video-description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.video-keywords-title {
+    font-weight: 400;
+    color: #5c5c5c;
+    padding-bottom: 20px;
+}
+
+.video-keywords {
+    float: left;
+    list-style: none;
+}
+
+.video-keywords li {
+    display: inline-block;
+    margin-right:6px;
+    margin-bottom: 30px;
+}
+
+.video-keywords li a:link,
+.video-keywords li a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 100%;
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+/* ------ VIDEO PLAYLIST ------ */
+
+.playlist-area {
+    padding: 30px 20px;
+    background-color: #151515;
+
+}
+
+.video-type-live {
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: #F5A623;
+}
+
+.video-image {
+    display: inline-block;
+    width: 100%;
+}
+
+.video-cell-list-live {
+    border-bottom: 1px solid #262525;
+    padding: 0px 0 10px 0;
+    margin-bottom: 30px;
+}
+
+.video-cell-list-playlist {
+    border-bottom: 1px solid #262525;
+    padding: 0px 0 10px 0;
+    margin-bottom: 15px;
+}
+
+.video-title {
+    font-weight: 400;
+    margin-top: -3px;
+    padding-left: 2px;
+}
+
+.viewers-count, .upload-date {
+    font-weight: 400;
+    color: #5c5c5c;
+    padding-left: 2px;
+}
+
+.ads-medium-rec {
+    text-align: center;
+    margin: 30px 5% 30px 10%;
+}
+
+.video-type-playlist {
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: #FFF;
+}
+
+/* ------- FOOTER -------- */
+
+footer {
+    background-color: #494949;
+    height: 75px;
+    width: 100%;
+    padding: 14px 0px;
+}
+
+
+
+.web-link {
+    margin-left: 30px;
+    list-style: none;
+}
+
+.web-link li {
+    display: inline-block;
+}
+
+.web-link li a:link,
+.web-link li a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 95%;
+    
+    transition: text-decoration 0.2s;
+}
+
+.web-link li a:hover,
+.web-link li a:active {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-link-bottom {
+    float: left;
+    padding-top: 6px;
+    font-size: 90%;
+}
